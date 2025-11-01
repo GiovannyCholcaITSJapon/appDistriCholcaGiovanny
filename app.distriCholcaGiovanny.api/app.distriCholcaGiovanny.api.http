@@ -1,0 +1,6 @@
+@app.distriCholcaGiovanny.api_HostAddress = http://localhost:5121
+
+GET {{app.distriCholcaGiovanny.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

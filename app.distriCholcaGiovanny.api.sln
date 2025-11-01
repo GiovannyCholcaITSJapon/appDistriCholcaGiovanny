@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.distriCholcaGiovanny.api", "app.distriCholcaGiovanny.api\app.distriCholcaGiovanny.api.csproj", "{276910F4-C454-4D0D-A514-BFAD478502C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.distriCholcaGiovanny.services", "app.distriCholcaGiovanny.services\app.distriCholcaGiovanny.services.csproj", "{D0C9DBD2-304D-4EFD-AC4A-194CAB3AC996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.distriCholcaGiovanny.dataAccess", "app.distriCholcaGiovanny.dataAccess\app.distriCholcaGiovanny.dataAccess.csproj", "{8D8FEFF7-30B0-48B4-B974-370C87D08028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.distriCholcaGiovanny.entities", "app.distriCholcaGiovanny.entities\app.distriCholcaGiovanny.entities.csproj", "{C9756983-0FB0-4A7E-934E-92B8D9FD5924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.distriCholcaGiovanny.common", "app.distriCholcaGiovanny.common\app.distriCholcaGiovanny.common.csproj", "{E4624436-0773-4B5C-80E9-1DA3F197A3E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{276910F4-C454-4D0D-A514-BFAD478502C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276910F4-C454-4D0D-A514-BFAD478502C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276910F4-C454-4D0D-A514-BFAD478502C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276910F4-C454-4D0D-A514-BFAD478502C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C9DBD2-304D-4EFD-AC4A-194CAB3AC996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C9DBD2-304D-4EFD-AC4A-194CAB3AC996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C9DBD2-304D-4EFD-AC4A-194CAB3AC996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C9DBD2-304D-4EFD-AC4A-194CAB3AC996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D8FEFF7-30B0-48B4-B974-370C87D08028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8FEFF7-30B0-48B4-B974-370C87D08028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8FEFF7-30B0-48B4-B974-370C87D08028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8FEFF7-30B0-48B4-B974-370C87D08028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9756983-0FB0-4A7E-934E-92B8D9FD5924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9756983-0FB0-4A7E-934E-92B8D9FD5924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9756983-0FB0-4A7E-934E-92B8D9FD5924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9756983-0FB0-4A7E-934E-92B8D9FD5924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4624436-0773-4B5C-80E9-1DA3F197A3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4624436-0773-4B5C-80E9-1DA3F197A3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4624436-0773-4B5C-80E9-1DA3F197A3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4624436-0773-4B5C-80E9-1DA3F197A3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
