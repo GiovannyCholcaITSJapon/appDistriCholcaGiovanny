@@ -1,5 +1,8 @@
 using System;
 using app.distriCholcaGiovanny.dataAccess.context;
+using app.distriCholcaGiovanny.dataAccess.repositories;
+using app.distriCholcaGiovanny.services.Implementations;
+using app.distriCholcaGiovanny.services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +23,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(conSqlServer);
     options.LogTo(Console.WriteLine, LogLevel.Information).EnableSensitiveDataLogging();
 });
+
+
+//declarar servicio y repositorios
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+
+
+
+
+
 
 
 var app = builder.Build();

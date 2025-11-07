@@ -15,7 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\app.distriCholcaGiovanny.common\app.distriCholcaGiovanny.common.csproj" />
     <ProjectReference Include="..\app.distriCholcaGiovanny.dataAccess\app.distriCholcaGiovanny.dataAccess.csproj" />
+    <ProjectReference Include="..\app.distriCholcaGiovanny.services\app.distriCholcaGiovanny.services.csproj" />
   </ItemGroup>
 
 </Project>

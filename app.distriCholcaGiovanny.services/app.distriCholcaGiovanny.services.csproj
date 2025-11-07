@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\app.distriCholcaGiovanny.common\app.distriCholcaGiovanny.common.csproj" />
+    <ProjectReference Include="..\app.distriCholcaGiovanny.dataAccess\app.distriCholcaGiovanny.dataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
