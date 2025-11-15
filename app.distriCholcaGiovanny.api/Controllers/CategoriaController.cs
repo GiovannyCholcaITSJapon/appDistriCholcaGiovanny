@@ -28,12 +28,15 @@ namespace app.distriCholcaGiovanny.api.Controllers
         }
 
 
-        /* [HttpPost("insertarCategoria")]
-         public async Task<IActionResult> InsertarCategoria([FromBody] CategoriaDto param)
-         {
-             _categoriaService.GetItem()
-
-         }*/
+        /**
+      * API PARA INSERTAR UNA CATEGORIA
+      * */
+        [HttpPost("insertarCategoria")]
+        public async Task<IActionResult> PostCategories([FromBody] CategoriaDto request)
+        {
+            var response = await _categoriaService.CrearItem(request);
+            return Ok(response);
+        }
 
         /**
          * API PARA OBTENER UNA CATEGORIA POR ID
@@ -51,6 +54,48 @@ namespace app.distriCholcaGiovanny.api.Controllers
             {
                 return NotFound(response);
             }
+        }
+
+        /**
+       * API PARA OBTENER TODAS LAS CATEGORIAS
+       * */
+        [HttpPost("obtenerCategorias")]
+        public async Task<IActionResult> ObtenerCategorias()
+        {
+            var result = await _categoriaService.GetItemsList();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return NotFound(result);
+            }
+        }
+
+
+
+        /**
+         * API PARA ACTUALIZAR UNA CATEGORIA POR ID
+         * */
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<IActionResult> ActualizarCategories(int id, [FromBody] CategoriaDto param)
+        {
+            var result = await _categoriaService.ActualizarItem(id, param);
+            return Ok(result);
+        }
+
+
+        /**
+         * API PARA ELIMINAR UNA CATEGORIA POR ID
+         * */
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> EliminarCategories(int id)
+        {
+            var result = await _categoriaService.EliminarItem(id);
+            return Ok(result);
         }
 
 

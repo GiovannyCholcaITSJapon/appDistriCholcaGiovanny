@@ -12,16 +12,16 @@ namespace app.distriCholcaGiovanny.services.Interfaces
         Task<BaseResponse<CategoriaDto>> GetItem(int id);
 
 
-       /* Task<> GetItemsList();
+        Task<BaseResponse<List<CategoriaDto>>> GetItemsList();
 
 
-        Task<> CrearItem(CategoriaDto param);
+        Task<BaseResponse<CategoriaDto>> CrearItem(CategoriaDto param);
 
 
-        Task<> ActualizarItem(int id, CategoriaDto param);
+        Task<BaseResponse<CategoriaDto>> ActualizarItem(int id, CategoriaDto param);
 
 
-        Task<> EliminarItem(int id);*/
+        Task<BaseResponse<string>> EliminarItem(int id);
 
     }
 }

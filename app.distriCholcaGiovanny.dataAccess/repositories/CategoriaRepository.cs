@@ -22,9 +22,9 @@ namespace app.distriCholcaGiovanny.dataAccess.repositories
 
         }
 
-        public Task DeleteItem(int id)
+        public async Task DeleteItem(int id)
         {
-            throw new NotImplementedException();
+            await DeleteEntity(id);
         }
 
         public async Task<Categoria> GetItem(int id)
@@ -32,14 +32,14 @@ namespace app.distriCholcaGiovanny.dataAccess.repositories
           return await SelectEntity(id);
         }
 
-        public Task<List<Categoria>> GetItemLista()
+        public async Task<List<Categoria>> GetItemLista()
         {
-            throw new NotImplementedException();
+            return await SelectEntitiesAll();
         }
 
-        public Task UpdateItem(Categoria entity)
+        public async Task UpdateItem(Categoria entity)
         {
-            throw new NotImplementedException();
+            await UpdateEntity(entity);
         }
     }
 }
