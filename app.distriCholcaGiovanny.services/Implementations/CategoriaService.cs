@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using app.distriCholcaGiovanny.common.DTOs;
 using app.distriCholcaGiovanny.dataAccess.repositories;
 using app.distriCholcaGiovanny.entities.models;
+using app.distriCholcaGiovanny.services.EventMQ;
 using app.distriCholcaGiovanny.services.Interfaces;
 using Azure;
 using Azure.Core;
@@ -17,11 +18,13 @@ namespace app.distriCholcaGiovanny.services.Implementations
     {
 
         private readonly ICategoriaRepository _repository;
+        private readonly IRabbitMQService _rabbitMQService;
 
 
-        public CategoriaService(ICategoriaRepository repository)
+        public CategoriaService(ICategoriaRepository repository, IRabbitMQService rabbitMQService)
         {
             _repository = repository;
+            _rabbitMQService = rabbitMQService;
         }
 
 
@@ -84,6 +87,9 @@ namespace app.distriCholcaGiovanny.services.Implementations
                 };
 
                 respuesta.Success = true;
+
+                await _rabbitMQService.PublishMessage(respuesta.Result, "CategoriaMensaje");
+
             }
             catch (Exception ex)
             {

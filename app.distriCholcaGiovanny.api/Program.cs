@@ -1,6 +1,8 @@
 using System;
+using app.distriCholcaGiovanny.common.EventMQ;
 using app.distriCholcaGiovanny.dataAccess.context;
 using app.distriCholcaGiovanny.dataAccess.repositories;
+using app.distriCholcaGiovanny.services.EventMQ;
 using app.distriCholcaGiovanny.services.Implementations;
 using app.distriCholcaGiovanny.services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.LogTo(Console.WriteLine, LogLevel.Information).EnableSensitiveDataLogging();
 });
 
+// Leer la configuración de RabbitMQ desde el appsettings.json y lo setea en la clase RabbitMQSettings
+builder.Services.Configure<RabbitMQSettings>(builder.Configuration.GetSection("rabbitmq"));
+
 
 //declarar servicio y repositorios
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
@@ -31,6 +36,8 @@ builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
 builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+
+builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
 
 
 
